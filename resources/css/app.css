@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@media print {
+    @page {
+        size: A4;
+        margin: 1cm;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .print\:bg-white {
+        background-color: white !important;
+    }
+
+    .print\:text-black {
+        color: black !important;
+    }
+
+    .print\:text-gray-500 {
+        color: #6B7280 !important;
+    }
+
+    .print\:text-gray-600 {
+        color: #4B5563 !important;
+    }
+
+    /* Hide non-essential elements when printing */
+    .no-print {
+        display: none !important;
+    }
+
+    /* Ensure charts are visible */
+    canvas {
+        max-height: 300px !important;
+    }
+
+    /* Force background colors in modern browsers */
+    * {
+        -webkit-print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+}
